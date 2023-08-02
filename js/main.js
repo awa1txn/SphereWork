@@ -238,237 +238,6 @@ if (burger) {
 }
 // MenuMobile
 
-// ProfileSettings
-
-const profileNickname  = document.querySelector('#profilenickname')
-const profileLogin = document.querySelector('#profilelogin')
-const profileEmail = document.querySelector('#profileemail')
-
-const publishSettings = (profileNickname, profileLogin, profileEmail) =>{
-	const Nicknameregex = /^[A-Za-z]{3,}$/;
-    const NicknameisValid = Nicknameregex.test(profileNickname.value);
-
-    if (!NicknameisValid) {
-		profileNickname.classList.add("sign__check-error")
-    }
-	const Loginregex = /^[A-Za-z]{3,}$/;
-    const LoginisValid = Loginregex.test(profileLogin.value);
-
-    if (!LoginisValid) {
-		profileLogin.classList.add("sign__check-error")
-    }
-
-	const Emailregex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const EmailisValid = Emailregex.test(profileEmail.value);
-
-    if (!EmailisValid) {
-		profileEmail.classList.add("sign__check-error")
-    }
-}
-const publishingSettings = () =>{
-	publishSettings(profileNickname, profileLogin, profileEmail)
-}
-// ProfileSettings
-
-// PublishOrder
-
-const orderTitle = document.querySelector('#orderTitle')
-const orderDesc = document.querySelector('#orderDesc')
-/* const orderCategory */
-const orderBudget = document.querySelector('#orderBudget')
-const orderStartDate = document.querySelector('#orderStartDate')
-const orderFiles = document.querySelector('#orderFiles')
-
-const createOrder = (orderTitle, orderDesc, orderBudget, orderStartDate, orderFiles) =>{
-	if(orderTitle.value.length < 5){
-		orderTitle.classList.add("sign__check-error")
-	}
-
-	if(orderDesc.value.length < 80) {
-		orderDesc.classList.add("sign__check-error")
-	}
-
-	if(orderBudget.value.length > 0){
-		console.log('budget valid')
-	} else{
-		orderBudget.classList.add("sign__check-error")
-	}
-
-	if(orderStartDate.value.length > 0) {
-		console.log('Length valid')
-	}  else{
-		orderStartDate.classList.add("sign__check-error")
-	}
-
-	if(orderFiles.files[0] && orderFiles.files[0].type.startsWith("image/")){
-		console.log('file(IMAGE) valid')
-	} else{
-		orderFiles.classList.add("sign__check-error")
-	}
-
-}
-const creatingOrder = () =>{
-	createOrder(orderTitle, orderDesc, orderBudget, orderStartDate, orderFiles)
-}
-
-
-// PublishOrder
-
-
-// SpecifyPortfolio
-
-const ProjName = document.querySelector('#projectName')
-const ProjDesc = document.querySelector('#projDesc')
-const ProjFiles = document.querySelector('#projFiles')
-
-const savePortfolio = (ProjName, ProjDesc, ProjFiles) =>{
-	if(ProjName.value.length < 5){
-		ProjName.classList.add("sign__check-error")
-	}
-
-	if(ProjDesc.value.length < 80) {
-		ProjDesc.classList.add("sign__check-error")
-	}
-
-	if(ProjFiles.files[0] && ProjFiles.files[0].type.startsWith("image/")){
-		console.log('file(IMAGE) for portfolio validation succes')
-	} else{
-		ProjFiles.classList.add("sign__check-error")
-	}
-}
-const savingPortfolio = () =>{
-	savePortfolio(ProjName, ProjDesc, ProjFiles)
-}
-
-// SpecifyPortfolio
-
-// ApplyForJob
-const coverLetterValidator = document.getElementById('cover-letter')
-const budgetValidator = document.getElementById('budget')
-const deadlineValidator = document.getElementById('deadline')
-
-const ApplyForJob = (coverLetterValidator, budgetValidator, deadlineValidator) => {
-	if(coverLetterValidator.value.length >= 200){
-		console.log('succes cover letter more than 200 symbols')
-	} else{
-		coverLetterValidator.classList.add("sign__check-error")
-	}
-
-	if(budgetValidator.value.length > 0){
-		console.log('budget is not empty')
-	} else{
-		budgetValidator.classList.add("sign__check-error")
-	}
-	
-	if(deadlineValidator.value.length > 0) {
-		console.log('Length validator')
-	}  else{
-		deadlineValidator.classList.add("sign__check-error")
-	}
-}
-const ApplyingForJob = () =>{
-	ApplyForJob(coverLetterValidator, budgetValidator, deadlineValidator)
-}
-
-// ApplyForJob
-
-// AuthValidation
-
-const nameValidator = document.getElementById('Name');
-const emailValidator = document.getElementById('Email');
-const PasswordValidator = document.getElementById('Password');
-const ConfirmPasswordValidator = document.getElementById('ConfirmPassword');
-const CheckValidator = document.getElementById('check');
-
-let passToggler = true;
-
-const SignUpValidate = (nameValidator, emailValidator, PasswordValidator, ConfirmPasswordValidator, CheckValidator) => {
-	const Nameregex = /^[A-Za-z]{3,}$/;
-    const NameisValid = Nameregex.test(nameValidator.value);
-
-    if (!NameisValid) {
-	  nameValidator.style.cssText = "color: red";
-	  nameValidator.value = '';
-	  nameValidator.placeholder = 'Name required 3 letters long and only letters.'
-	  nameValidator.classList.add("sign__input-error")
-    }
-
-	const Emailregex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const EmailisValid = Emailregex.test(emailValidator.value);
-
-    if (!EmailisValid) {
-	  emailValidator.value = '';
-	  emailValidator.placeholder = 'Email invalid.'
-	  emailValidator.classList.add("sign__input-error")
-    }
-
-	const Passwordregex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
-    const PasswordisValid = Passwordregex.test(PasswordValidator.value);
-
-    if (!PasswordisValid) {
-		PasswordValidator.value = '';
-		PasswordValidator.placeholder = 'Required 8 letters, 1 uppercase and 1 digit.'
-		PasswordValidator.classList.add("sign__input-error")
-    }
-
-	if (PasswordValidator.value !== ConfirmPasswordValidator.value) {
-		ConfirmPasswordValidator.value = '';
-		ConfirmPasswordValidator.placeholder = 'Passwords do not match.'
-		ConfirmPasswordValidator.classList.add("sign__input-error")
-	}
-	if(!document.querySelector(".sign__check").classList.contains("active") ){
-		document.querySelector(".sign__check").classList.add("sign__check-error")
-	}
-
-}
-
-const SignUpValidating = () =>{
-	SignUpValidate(nameValidator, emailValidator, PasswordValidator, ConfirmPasswordValidator, CheckValidator)
-}
-
-const SignInValidate = (emailValidator, PasswordValidator) => {
-
-	const Emailregex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const EmailisValid = Emailregex.test(emailValidator.value);
-
-    if (!EmailisValid) {
-	  emailValidator.value = '';
-	  emailValidator.placeholder = 'Email invalid.'
-	  emailValidator.classList.add("sign__input-error")
-    }
-
-	const Passwordregex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
-    const PasswordisValid = Passwordregex.test(PasswordValidator.value);
-
-    if (!PasswordisValid) {
-		PasswordValidator.value = '';
-		PasswordValidator.placeholder = 'Required 8 letters, 1 uppercase and 1 digit.'
-		PasswordValidator.classList.add("sign__input-error")
-    }
-
-	if(!document.querySelector(".sign__check").classList.contains("active") ){
-		document.querySelector(".sign__check").classList.add("sign__check-error")
-	}
-
-}
-
-const SignInValidating = () =>{
-	SignInValidate(emailValidator, PasswordValidator)
-}
-
-
-const showPassToggle = () => { //showPassToggle
-	passToggler = !passToggler;
-	if(passToggler == false){
-		document.querySelector('.pass_input1').type = 'text'
-		document.querySelector('.pass_input2').type = 'text'
-	} else {
-		document.querySelector('.pass_input1').type = 'password'
-		document.querySelector('.pass_input2').type = 'password'
-	}
-}
-// AuthValidation
-
 // SignCheck
 const signCheck = document.querySelector('.sign__check');
 if (signCheck) {
@@ -894,7 +663,7 @@ const messagesUsersBtn = document.querySelector('.messages-chat__dots');
 const popupRight2 = document.querySelector('.popup-right_2')
 const popupRightBody2 = document.querySelector('.popup-right_2 .popup__body');
 
-if (messagesUsers) {
+if (messagesUsers[0]) {
 	for (const btn of messagesUsers) {
 		btn.addEventListener('contextmenu', (e) => {
 			e.preventDefault();
@@ -962,6 +731,299 @@ if (widthWindow <= 700 && messagesBack) {
 	}
 }
 // Messages
+
+// ProfileSettings
+
+const profileNickname  = document.querySelector('#profilenickname')
+const profileLogin = document.querySelector('#profilelogin')
+const profileEmail = document.querySelector('#profileemail')
+
+const publishSettings = (profileNickname, profileLogin, profileEmail) =>{
+	const Nicknameregex = /^[A-Za-z]{3,}$/;
+    const NicknameisValid = Nicknameregex.test(profileNickname.value);
+
+    if (!NicknameisValid) {
+		profileNickname.classList.add("sign__check-error")
+    }
+	const Loginregex = /^[A-Za-z]{3,}$/;
+    const LoginisValid = Loginregex.test(profileLogin.value);
+
+    if (!LoginisValid) {
+		profileLogin.classList.add("sign__check-error")
+    }
+
+	const Emailregex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const EmailisValid = Emailregex.test(profileEmail.value);
+
+    if (!EmailisValid) {
+		profileEmail.classList.add("sign__check-error")
+    }
+}
+const publishingSettings = () =>{
+	publishSettings(profileNickname, profileLogin, profileEmail)
+}
+// ProfileSettings
+
+// PublishOrder
+
+const orderTitle = document.querySelector('#orderTitle')
+const orderDesc = document.querySelector('#orderDesc')
+/* const orderCategory */
+const orderBudget = document.querySelector('#orderBudget')
+const orderStartDate = document.querySelector('.orderStartDate')
+const orderFiles = document.querySelector('#orderFiles')
+
+const createOrder = (orderTitle, orderDesc, orderBudget, orderStartDate, orderFiles) =>{
+	if(orderTitle.value.length < 5){
+		orderTitle.classList.add("sign__check-error")
+	}
+
+	if(orderDesc.value.length < 80) {
+		orderDesc.classList.add("sign__check-error")
+	}
+
+	if(orderBudget.value.length > 0){
+		console.log('budget valid')
+	} else{
+		orderBudget.classList.add("sign__check-error")
+	}
+
+	if(orderStartDate.value.length > 0) {
+		console.log('Length valid')
+	}  else{
+		orderStartDate.classList.add("sign__check-error")
+	}
+
+	if(orderFiles.files[0] && orderFiles.files[0].type.startsWith("image/")){
+		console.log('file(IMAGE) valid')
+	} else{
+		orderFiles.classList.add("sign__check-error")
+	}
+
+}
+const creatingOrder = () =>{
+	createOrder(orderTitle, orderDesc, orderBudget, orderStartDate, orderFiles)
+}
+
+
+// PublishOrder
+
+
+// SpecifyPortfolio
+
+const ProjName = document.querySelector('#projectName')
+const ProjDesc = document.querySelector('#projDesc')
+const ProjFiles = document.querySelector('#projFiles')
+
+const savePortfolio = (ProjName, ProjDesc, ProjFiles) =>{
+	if(ProjName.value.length < 5){
+		ProjName.classList.add("sign__check-error")
+	}
+
+	if(ProjDesc.value.length < 80) {
+		ProjDesc.classList.add("sign__check-error")
+	}
+
+	if(ProjFiles.files[0] && ProjFiles.files[0].type.startsWith("image/")){
+		console.log('file(IMAGE) for portfolio validation succes')
+	} else{
+		ProjFiles.classList.add("sign__check-error")
+	}
+}
+const savingPortfolio = () =>{
+	savePortfolio(ProjName, ProjDesc, ProjFiles)
+}
+
+// SpecifyPortfolio
+
+// ApplyForJob
+const coverLetterValidator = document.getElementById('cover-letter')
+const budgetValidator = document.getElementById('budget')
+const deadlineValidator = document.getElementById('deadline')
+
+const ApplyForJob = (coverLetterValidator, budgetValidator, deadlineValidator) => {
+	if(coverLetterValidator.value.length >= 200){
+		console.log('succes cover letter more than 200 symbols')
+	} else{
+		coverLetterValidator.classList.add("sign__check-error")
+	}
+
+	if(budgetValidator.value.length > 0){
+		console.log('budget is not empty')
+	} else{
+		budgetValidator.classList.add("sign__check-error")
+	}
+	
+	if(deadlineValidator.value.length > 0) {
+		console.log('Length validator')
+	}  else{
+		deadlineValidator.classList.add("sign__check-error")
+	}
+}
+const ApplyingForJob = () =>{
+	ApplyForJob(coverLetterValidator, budgetValidator, deadlineValidator)
+}
+
+// ApplyForJob
+
+// AuthValidation
+
+const nameValidator = document.getElementById('Name');
+const emailValidator = document.getElementById('Email');
+const PasswordValidator = document.getElementById('Password');
+const ConfirmPasswordValidator = document.getElementById('ConfirmPassword');
+const CheckValidator = document.getElementById('check');
+
+let passToggler = true;
+
+const SignUpValidate = (nameValidator, emailValidator, PasswordValidator, ConfirmPasswordValidator, CheckValidator) => {
+	const Nameregex = /^[A-Za-z]{3,}$/;
+    const NameisValid = Nameregex.test(nameValidator.value);
+
+    if (!NameisValid) {
+	  nameValidator.style.cssText = "color: red";
+	  nameValidator.value = '';
+	  nameValidator.placeholder = 'Name required 3 letters long and only letters.'
+	  nameValidator.classList.add("sign__input-error")
+    }
+
+	const Emailregex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const EmailisValid = Emailregex.test(emailValidator.value);
+
+    if (!EmailisValid) {
+	  emailValidator.value = '';
+	  emailValidator.placeholder = 'Email invalid.'
+	  emailValidator.classList.add("sign__input-error")
+    }
+
+	const Passwordregex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+    const PasswordisValid = Passwordregex.test(PasswordValidator.value);
+
+    if (!PasswordisValid) {
+		PasswordValidator.value = '';
+		PasswordValidator.placeholder = 'Required 8 letters, 1 uppercase and 1 digit.'
+		PasswordValidator.classList.add("sign__input-error")
+    }
+
+	if (PasswordValidator.value !== ConfirmPasswordValidator.value) {
+		ConfirmPasswordValidator.value = '';
+		ConfirmPasswordValidator.placeholder = 'Passwords do not match.'
+		ConfirmPasswordValidator.classList.add("sign__input-error")
+	}
+	if(!document.querySelector(".sign__check").classList.contains("active") ){
+		document.querySelector(".sign__check").classList.add("sign__check-error")
+	}
+
+}
+
+const SignUpValidating = () =>{
+	SignUpValidate(nameValidator, emailValidator, PasswordValidator, ConfirmPasswordValidator, CheckValidator)
+}
+
+const SignInValidate = (emailValidator, PasswordValidator) => {
+
+	const Emailregex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const EmailisValid = Emailregex.test(emailValidator.value);
+
+    if (!EmailisValid) {
+	  emailValidator.value = '';
+	  emailValidator.placeholder = 'Email invalid.'
+	  emailValidator.classList.add("sign__input-error")
+    }
+
+	const Passwordregex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+    const PasswordisValid = Passwordregex.test(PasswordValidator.value);
+
+    if (!PasswordisValid) {
+		PasswordValidator.value = '';
+		PasswordValidator.placeholder = 'Required 8 letters, 1 uppercase and 1 digit.'
+		PasswordValidator.classList.add("sign__input-error")
+    }
+
+	if(!document.querySelector(".sign__check").classList.contains("active") ){
+		document.querySelector(".sign__check").classList.add("sign__check-error")
+	}
+
+}
+
+const SignInValidating = () =>{
+	SignInValidate(emailValidator, PasswordValidator)
+}
+
+
+const showPassToggle = () => { //showPassToggle
+	passToggler = !passToggler;
+	if(passToggler == false){
+		document.querySelector('.pass_input1').type = 'text'
+		document.querySelector('.pass_input2').type = 'text'
+	} else {
+		document.querySelector('.pass_input1').type = 'password'
+		document.querySelector('.pass_input2').type = 'password'
+	}
+}
+// AuthValidation
+
+// GeneralProfileEdit
+
+const GeneralProfileCountry = document.querySelector('#GeneralCountry')
+const GeneralProfileLanguages = document.querySelector('#GeneralLanguages')
+const GeneralProfileAboutMe = document.querySelector('#GeneralAboutMe')
+
+const publishGeneralProfile = (GeneralProfileCountry, GeneralProfileLanguages, GeneralProfileAboutMe)=>{
+	if(GeneralProfileCountry.value.length < 5){
+		GeneralProfileCountry.classList.add("sign__check-error")
+	}
+	if(GeneralProfileLanguages.value.length < 5){
+		GeneralProfileLanguages.classList.add("sign__check-error")
+	}
+	if(GeneralProfileAboutMe.value.length < 60){
+		GeneralProfileAboutMe.classList.add("sign__check-error")
+	}
+}
+
+const publishingGeneralProfile = ()=>{
+	publishGeneralProfile(GeneralProfileCountry, GeneralProfileLanguages, GeneralProfileAboutMe)
+}
+// GeneralProfileEdit
+
+// GeneralWorkExp
+const GeneralWorkExpCompanyName = document.querySelector('#GeneralWorkExpCompanyName')
+const GeneralWorkExpJobTitle = document.querySelector('#GeneralWorkTitle')
+const GeneralWorkExpStartDate = document.querySelector('.date__input1')
+const GeneralWorkExpEndDate = document.querySelector('.date__input2')
+const GeneralWorkExpDesc = document.querySelector('#GeneralWorkDesc')
+
+const publishGeneralWorkExp = (GeneralWorkExpCompanyName, GeneralWorkExpJobTitle, GeneralWorkExpStartDate, GeneralWorkExpEndDate, GeneralWorkExpDesc) =>{
+	if(GeneralWorkExpCompanyName.value.length < 3){
+		GeneralWorkExpCompanyName.classList.add("sign__check-error")
+	}
+	if(GeneralWorkExpJobTitle.value.length < 3){
+		GeneralWorkExpJobTitle.classList.add("sign__check-error")
+	}
+	if(GeneralWorkExpStartDate.value.length < 3){
+		GeneralWorkExpStartDate.classList.add("sign__check-error")
+	}
+	if(GeneralWorkExpEndDate.value.length < 3){
+		GeneralWorkExpEndDate.classList.add("sign__check-error")
+	}
+	if(GeneralWorkExpDesc.value.length < 60){
+		GeneralWorkExpDesc.classList.add("sign__check-error")
+	}
+}
+const publishinGeneralWorkExp = ()=>{
+	publishGeneralWorkExp(GeneralWorkExpCompanyName, GeneralWorkExpJobTitle, GeneralWorkExpStartDate, GeneralWorkExpEndDate, GeneralWorkExpDesc)
+}
+// GeneralWorkExp
+
+// GeneralSocialMedia
+
+const GeneralBehance = document.querySelector('#GeneralBehance')
+const GeneralDribble = document.querySelector('#GeneralDribble')
+const GeneralInstagram = document.querySelector('#GeneralInstagram')
+const GeneralLinkedin = document.querySelector('#GeneralLinkedin')
+
+
+// GeneralSocialMedia
 
 
 // INCLUDE JQUERY & JQUERY UI 1.12.1

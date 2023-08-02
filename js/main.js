@@ -744,12 +744,16 @@ const publishSettings = (profileNickname, profileLogin, profileEmail) =>{
 
     if (!NicknameisValid) {
 		profileNickname.classList.add("sign__check-error")
+		profileNickname.value = '';
+		profileNickname.placeholder = 'Invalid nickname.'
     }
 	const Loginregex = /^[A-Za-z]{3,}$/;
     const LoginisValid = Loginregex.test(profileLogin.value);
 
     if (!LoginisValid) {
 		profileLogin.classList.add("sign__check-error")
+		profileLogin.value = '';
+		profileLogin.placeholder = 'Invalid login.'
     }
 
 	const Emailregex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -776,26 +780,34 @@ const orderFiles = document.querySelector('#orderFiles')
 const createOrder = (orderTitle, orderDesc, orderBudget, orderStartDate, orderFiles) =>{
 	if(orderTitle.value.length < 5){
 		orderTitle.classList.add("sign__check-error")
+		orderTitle.value = '';
+		orderTitle.placeholder = 'Required more than 5 letters.'
 	}
 
 	if(orderDesc.value.length < 80) {
 		orderDesc.classList.add("sign__check-error")
+		orderDesc.value = '';
+		orderDesc.placeholder = 'Required more than 80 letters.'
 	}
 
 	if(orderBudget.value.length > 0){
-		console.log('budget valid')
+		orderBudget.classList.add("sign__check-success")
 	} else{
 		orderBudget.classList.add("sign__check-error")
+		orderBudget.value = '';
+		orderBudget.placeholder = 'Empty string.'
 	}
 
 	if(orderStartDate.value.length > 0) {
-		console.log('Length valid')
+		orderStartDate.classList.add("sign__check-success")
 	}  else{
 		orderStartDate.classList.add("sign__check-error")
+		orderStartDate.value = '';
+		orderStartDate.placeholder = 'Empty string.'
 	}
 
 	if(orderFiles.files[0] && orderFiles.files[0].type.startsWith("image/")){
-		console.log('file(IMAGE) valid')
+		orderFiles.classList.add("sign__check-success")
 	} else{
 		orderFiles.classList.add("sign__check-error")
 	}
@@ -818,14 +830,18 @@ const ProjFiles = document.querySelector('#projFiles')
 const savePortfolio = (ProjName, ProjDesc, ProjFiles) =>{
 	if(ProjName.value.length < 5){
 		ProjName.classList.add("sign__check-error")
+		ProjName.value = '';
+		ProjName.placeholder = 'Project name need to have more than 5 letters.'
 	}
 
 	if(ProjDesc.value.length < 80) {
 		ProjDesc.classList.add("sign__check-error")
+		ProjDesc.value = '';
+		ProjDesc.placeholder = 'Required more than 80 letters.'
 	}
 
 	if(ProjFiles.files[0] && ProjFiles.files[0].type.startsWith("image/")){
-		console.log('file(IMAGE) for portfolio validation succes')
+		ProjFiles.classList.add("sign__check-success")
 	} else{
 		ProjFiles.classList.add("sign__check-error")
 	}
@@ -843,21 +859,27 @@ const deadlineValidator = document.getElementById('deadline')
 
 const ApplyForJob = (coverLetterValidator, budgetValidator, deadlineValidator) => {
 	if(coverLetterValidator.value.length >= 200){
-		console.log('succes cover letter more than 200 symbols')
+		coverLetterValidator.classList.add("sign__check-success")
 	} else{
 		coverLetterValidator.classList.add("sign__check-error")
+		coverLetterValidator.value = '';
+		coverLetterValidator.placeholder = 'Required more than 200 letters.'
 	}
 
 	if(budgetValidator.value.length > 0){
-		console.log('budget is not empty')
+		budgetValidator.classList.add("sign__check-success")
 	} else{
 		budgetValidator.classList.add("sign__check-error")
+		budgetValidator.value = '';
+		budgetValidator.placeholder = 'Empty string.'
 	}
 	
 	if(deadlineValidator.value.length > 0) {
-		console.log('Length validator')
+		deadlineValidator.classList.add("sign__check-success")
 	}  else{
 		deadlineValidator.classList.add("sign__check-error")
+		deadlineValidator.value = '';
+		deadlineValidator.placeholder = 'Empty string.'
 	}
 }
 const ApplyingForJob = () =>{
@@ -970,14 +992,20 @@ const GeneralProfileLanguages = document.querySelector('#GeneralLanguages')
 const GeneralProfileAboutMe = document.querySelector('#GeneralAboutMe')
 
 const publishGeneralProfile = (GeneralProfileCountry, GeneralProfileLanguages, GeneralProfileAboutMe)=>{
-	if(GeneralProfileCountry.value.length < 5){
+	if(GeneralProfileCountry.value.length < 2){
 		GeneralProfileCountry.classList.add("sign__check-error")
+		GeneralProfileCountry.value = '';
+		GeneralProfileCountry.placeholder = 'Require more than 2 letters.'
 	}
-	if(GeneralProfileLanguages.value.length < 5){
+	if(GeneralProfileLanguages.value.length < 3){
 		GeneralProfileLanguages.classList.add("sign__check-error")
+		GeneralProfileLanguages.value = '';
+		GeneralProfileLanguages.placeholder = 'Required more than 3 letters.'
 	}
 	if(GeneralProfileAboutMe.value.length < 60){
 		GeneralProfileAboutMe.classList.add("sign__check-error")
+		GeneralProfileAboutMe.value = '';
+		GeneralProfileAboutMe.placeholder = 'Required more than 60 letters.'
 	}
 }
 
@@ -996,18 +1024,28 @@ const GeneralWorkExpDesc = document.querySelector('#GeneralWorkDesc')
 const publishGeneralWorkExp = (GeneralWorkExpCompanyName, GeneralWorkExpJobTitle, GeneralWorkExpStartDate, GeneralWorkExpEndDate, GeneralWorkExpDesc) =>{
 	if(GeneralWorkExpCompanyName.value.length < 3){
 		GeneralWorkExpCompanyName.classList.add("sign__check-error")
+		GeneralWorkExpCompanyName.value = ''
+		GeneralWorkExpCompanyName.placeholder = 'Required more than 3 letters.'
 	}
 	if(GeneralWorkExpJobTitle.value.length < 3){
 		GeneralWorkExpJobTitle.classList.add("sign__check-error")
+		GeneralWorkExpJobTitle.value = ''
+		GeneralWorkExpCompanyName.placeholder = 'Required more than 3 letters.'
 	}
 	if(GeneralWorkExpStartDate.value.length < 3){
 		GeneralWorkExpStartDate.classList.add("sign__check-error")
+		GeneralWorkExpStartDate.value = ''
+		GeneralWorkExpStartDate.placeholder = 'Required more than 3 letters.'
 	}
 	if(GeneralWorkExpEndDate.value.length < 3){
 		GeneralWorkExpEndDate.classList.add("sign__check-error")
+		GeneralWorkExpEndDate.value = ''
+		GeneralWorkExpEndDate.placeholder = 'Required more than 3 letters.'
 	}
 	if(GeneralWorkExpDesc.value.length < 60){
 		GeneralWorkExpDesc.classList.add("sign__check-error")
+		GeneralWorkExpDesc.value = ''
+		GeneralWorkExpDesc.placeholder = 'Required more than 60 letters.'
 	}
 }
 const publishinGeneralWorkExp = ()=>{

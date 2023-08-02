@@ -3485,6 +3485,9 @@ user-select:none .messages-user__item:last-child {
 .sign__check-error {
   border: 2px red solid;
 }
+.sign__check-success {
+  border: 2px greenyellow solid !important;
+}
 .sign__terms {
   display: flex;
   align-items: center;

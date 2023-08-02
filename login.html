@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sphere Work</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="popup popup-phone ">
+		<div class="popup__body popup-phone__body">
+			<h2 class="popup-phone__title">
+				Phone verification
+			</h2>
+			<p class="popup-phone__text">
+				In order to protect the security of your account, please add your phone number. We will send you a text
+				message with a verification code that you'll need to enter on the next screen
+			</p>
+			<form class="popup-phone__form" action="">
+				<div class="popup-phone__content">
+					<div class="popup-phone__wrap">
+						<button type="button" class="popup-phone__select">
+							<img src="img/usa-flag.svg" alt="">
+							<img src="img/arrow-down-small.svg" alt="">
+						</button>
+						<div class="popup-phone__drop"></div>
+					</div>
+					<div class="popup-phone__box">
+						<input type="text"
+							oninput="this.value = this.value.replace(/[^0-9.+]/g, '').replace(/(\..*)\./g, '$1');"
+							maxlength="12" class="input popup-phone__input" placeholder="(+91)">
+					</div>
+				</div>
+				<div class="btn-pink__wrap">
+					<button type="button" class="btn-pink popup-phone__btn">
+						Send
+					</button>
+				</div>
+			</form>
+		</div>
+		<div class="popup__bg"></div>
+	</div>
+
+	<div class="popup popup-ver">
+		<div class="popup__body popup-ver__body">
+			<h2 class="popup-ver__title">
+				Phone verification
+			</h2>
+			<p class="popup-ver__text">
+				Please enter the 6-digit confirmation code sent to <span>+91-679656824</span>. The code is valid for 30
+				minutes.
+			</p>
+			<form class="popup-ver__form" action="">
+				<div class="popup-ver__content">
+					<div class="popup-ver__box">
+						<input type="text" class="input popup-ver__input" maxlength="6"
+							oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" required>
+						<div class="popup-ver__info">
+							<span>Confirmation code sent</span>
+							<img src="img/info-icon.svg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="btn-pink__wrap">
+					<button type="button" class="btn-pink popup-ver__btn">
+						Accept
+					</button>
+				</div>
+			</form>
+		</div>
+		<div class="popup__bg"></div>
+	</div>
+
+	<div class="popup popup-number">
+		<div class="popup__body popup-number__body">
+			<h2 class="popup-number__title">
+				Number verification is complete!
+			</h2>
+			<p class="popup-number__text">
+				You can now continue using our service and gain access to all its features. Thank you for your trust!
+			</p>
+			<div class="popup-number__wrap btn-pink__wrap">
+				<button type="button" class="btn-pink popup-number__btn">
+					Ok
+				</button>
+			</div>
+		</div>
+		<div class="popup__bg"></div>
+	</div>
+
+	<div class="popup popup-forgot">
+		<div class="popup__body popup-forgot__body">
+			<h2 class="popup-forgot__title">
+				Forgot Password?
+			</h2>
+			<form class="popup-forgot__form" action="">
+				<div class="popup-forgot__content">
+					<div class="popup-forgot__box">
+						<input type="text" class="input popup-forgot__input" maxlength="6" placeholder="Your Email" required>
+						<img src="img/email-icon.svg" class="popup-forgot__mail" alt="">
+					</div>
+				</div>
+				<div class="btn-pink__wrap">
+					<button type="button" class="btn-pink popup-forgot__btn">
+						Reset
+					</button>
+				</div>
+			</form>
+		</div>
+		<div class="popup__bg"></div>
+	</div>
+
+	<div class="popup popup-pass">
+		<div class="popup__body popup-pass__body">
+			<h2 class="popup-pass__title">
+				Forgot Password?
+			</h2>
+			<p class="popup-pass__text">
+				We’ve sent you an email to <span>account@gmail.com</span> with activation link
+			</p>
+			<div class="btn-pink__wrap">
+				<button type="button" class="btn-pink popup-pass__btn">
+					Ok
+				</button>
+			</div>
+		</div>
+		<div class="popup__bg"></div>
+	</div>
+
+
+	<main class="main sign__main">
+		<section class="sign">
+			<div class="sign__animation">
+				<div class="sign__man">
+					<img src="img/sign-man.png" alt="">
+				</div>
+				<div class="sign__bg"></div>
+			</div>
+			<div class="sign__right">
+				<div class="sign__grad">
+					<img src="img/menu-grad-1.png" alt="">
+				</div>
+
+				<div class="sign__grad sign__grad_2">
+					<img src="img/menu-grad-2.png" alt="">
+				</div>
+				<img src="img/logo.png" alt="" class="sign__logo">
+				<h1 class="sign__title">
+					Log in
+				</h1>
+				<h2 class="sign__subtitle">
+					Pay and Earn Crypto for Freelance Services
+				</h2>
+				<form action="#" class="sign__form">
+					<div class="sign__wrap">
+						<button type="button" class="sign__google">
+							<img src="img/google-icon.svg" alt="">
+							<span>Continue with Google</span>
+						</button>
+						<button type="button" class="sign__google">
+							<img src="img/apple-icon.svg" alt="">
+							<span>Continue with Apple</span>
+						</button>
+					</div>
+					<div class="sign__box">
+						<input type="text" class="input sign__input" placeholder="Email" id="Email">
+						<span class="sign__itext">Your email</span>
+						<img src="img/email-icon.svg" alt="" class="sign__icon">
+						<img src="img/email-grad-icon.svg" alt="" class="sign__icon sign__icon_2">
+					</div>
+					<div class="sign__box">
+						<input type="text" class="input sign__input pass_input1" placeholder="Password" id="Password">
+						<span class="sign__itext">Enter your password</span>
+						<img src="img/pass-icon.svg" alt="" class="sign__icon">
+						<img src="img/pass-grad-icon.svg" alt="" class="sign__icon sign__icon_2">
+						<img src="img/eye-icon.svg" alt="" class="sign__icon sign__icon_show" >
+						<img src="img/eye-blue-icon.svg" alt="" class="sign__icon sign__icon_2 sign__icon_show" onclick="showPassToggle()">
+					</div>
+					<div class="sign__terms">
+						<button type="button" class="sign__check"></button>
+						<p class="sign__text">
+							I accept Remember me
+						</p>
+						<button type="button" class="sign__forgot">
+							Forgot password?
+						</button>
+					</div>
+					<div class="btn-pink__wrap">
+						<button type="button" class="sign__btn btn-pink" onclick="SignInValidating()">
+							Log in
+						</button>
+						<!-- <a href="profile.html" class="sign__btn btn-pink">
+							Sign up
+						</a> -->
+					</div>
+					<div class="sign__have">
+						Don’t have an account yet? <a href="index.html">Sign up</a>
+					</div>
+				</form>
+			</div>
+		</section>
+	</main>
+
+	<script src="js/main.js"></script>
+</body>
+
+</html>

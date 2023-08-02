@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sphere Work</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<div class="popup popup-apply">
+		<div class="popup__body">
+			<h2 class="popup-apply__title">
+				Apply for this Job
+			</h2>
+			<form action="#" class="edit-general-work__form">
+				<div class="edit-portfolio__box">
+					<label class="edit-portfolio__label">
+						<p>Your Application</p>
+					</label>
+					<textarea type="text" required class="input edit-portfolio__input edit-portfolio__textarea"
+						id="cover-letter"
+						placeholder="Example: Hi there! I’d like to apply this Job as I feel I am fully qualified for this position. Are you able to provide me with more details?"></textarea>
+				</div>
+				<div class="edit-general-work__body">
+					<p class="edit-general-work__subtext">
+						Proposed Budget
+					</p>
+					<div class="edit-general-work__box">
+						<input type="text" class="edit-general-work__input input" placeholder="100 USDT" id="budget">
+					</div>
+				</div>
+				<div class="edit-general-work__body">
+					<p class="edit-general-work__subtext">
+						Proposed Deadline (Days)
+					</p>
+					<div class="edit-general-work__box">
+						<input type="text" class="edit-general-work__input input" placeholder="1" id="deadline">
+					</div>
+				</div>
+				<div class="edit-portfolio__wrap">
+					<div class="btn-pink__wrap">
+						<button type="button" class="btn-pink edit-portfolio__btn popup-apply__cancel">
+							Cancel
+						</button>
+					</div>
+					<div class="btn-pink__wrap">
+						<button type="button" class="btn-pink edit-portfolio__btn" onclick="ApplyingForJob()">
+							Save
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="popup__bg"></div>
+	</div>
+
+	<main class="main">
+		<header class="header">
+			<div class="header__box">
+				<a href="market.html" class="header__back">
+					<img src="img/left-arrow.svg" alt="">
+					<span>Back</span>
+				</a>
+			</div>
+			<h2 class="header__title">
+				Marketplace
+			</h2>
+			<div class="header__box">
+				<button type="button" class="header__burger">
+					<img src="img/burger-icon.svg" alt="">
+				</button>
+			</div>
+		</header>
+		<section class="menu">
+			<div class="menu__grad">
+				<img src="img/menu-grad-1.png" alt="">
+			</div>
+
+			<div class="menu__grad menu__grad_2">
+				<img src="img/menu-grad-2.png" alt="">
+			</div>
+			<div class="menu__wrap">
+				<a href="index.html" class="menu__logo your-photo">
+					<img src="img/logo.png" alt="">
+				</a>
+				<p class="menu__bal">
+					Balance
+				</p>
+				<h2 class="menu__title">
+					200 000 USDT
+				</h2>
+			</div>
+			<ul class="menu__list">
+				<li class="menu__item">
+					<a href="profile.html" class="menu__link ">
+						<img src="img/menu-icon-1.svg" alt="">
+						<span>My page</span>
+					</a>
+				</li>
+				<li class="menu__item">
+					<a href="wallet.html" class="menu__link">
+						<img src="img/menu-icon-2.svg" alt="">
+						<span>My wallet</span>
+					</a>
+				</li>
+				<li class="menu__item">
+					<a href="business.html" class="menu__link">
+						<img src="img/menu-icon-3.svg" alt="">
+						<span>My business</span>
+					</a>
+				</li>
+				<li class="menu__item">
+					<a href="messages.html" class="menu__link">
+						<img src="img/menu-icon-4.svg" alt="">
+						<span>My messages</span>
+						<span class="menu__mark">1</span>
+					</a>
+				</li>
+				<li class="menu__item">
+					<a href="market.html" class="menu__link active">
+						<img src="img/menu-icon-5.svg" alt="">
+						<span>Marketplace</span>
+					</a>
+				</li>
+				<li class="menu__item">
+					<a href="rating.html" class="menu__link">
+						<img src="img/menu-icon-6.svg" alt="">
+						<span>Rating</span>
+					</a>
+				</li>
+				<li class="menu__item">
+					<a href="referrals.html" class="menu__link">
+						<img src="img/menu-icon-7.svg" alt="">
+						<span>Referrals</span>
+					</a>
+				</li>
+				<li class="menu__item">
+					<a href="settings.html" class="menu__link">
+						<img src="img/menu-icon-8.svg" alt="">
+						<span>Settings</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="menu__list_2">
+				<li class="menu__item">
+					<a href="profile-premium.html" class="menu__link">
+						<img src="img/menu-icon-9.svg" alt="">
+						<span>Premium</span>
+					</a>
+				</li>
+				<li class="menu__item">
+					<a href="premium-info.html" class="menu__link">
+						<img src="img/menu-icon-10.svg" alt="">
+						<span>Help</span>
+					</a>
+				</li>
+				<li class="menu__item">
+					<a href="index.html" class="menu__link">
+						<img src="img/menu-icon-11.svg" alt="">
+						<span>Log out</span>
+					</a>
+				</li>
+			</ul>
+		</section>
+		<div class="menu__bg"></div>
+		<section class="developer">
+			<a href="market.html" class="edit__back">
+				<img src="img/left-arrow.svg" alt="">
+				<span>Back</span>
+			</a>
+			<h2 class="edit__title">
+				I will do presale of token and fork pancakeswap, olympus
+			</h2>
+			<div class="card__box">
+				<div class="developer__img card__img">
+					<img src="img/profile-photo-15.png" alt="">
+				</div>
+				<div class="card__small">
+					<p class="card__name">Sven Fredriksen</p>
+					<div class="card__star">
+						<img src="img/star-icon.svg" alt="">
+						<span>5.0</span>
+					</div>
+				</div>
+			</div>
+			<div class="developer__price">
+				<h3>2 000 USDT</h3><span>14-20 days</span>
+			</div>
+			<div class="edit-general-main__service">
+				<h3>Services</h3>
+				<div class="profile-offer__list edit-general-main__list">
+					<div class="profile-offer__service">
+						<div class="profile-offer__info">
+							Web, Mobile & Software Dev
+						</div>
+					</div>
+					<div class="profile-offer__service">
+						<div class="profile-offer__info">
+							JavaScript
+						</div>
+					</div>
+					<div class="profile-offer__service">
+						<div class="profile-offer__info">
+							HTML
+						</div>
+					</div>
+					<div class="profile-offer__service">
+						<div class="profile-offer__info">
+							CSS
+						</div>
+					</div>
+					<div class="profile-offer__service">
+						<div class="profile-offer__info">
+							User Testing
+						</div>
+					</div>
+					<div class="profile-offer__service">
+						<div class="profile-offer__info">
+							Swift
+						</div>
+					</div>
+					<div class="profile-offer__service">
+						<div class="profile-offer__info">
+							IOS
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="developer__text">
+				As a blockchain full stack developer
+				I've got deep knowledge of Solidity / Ethereum network and common standards of the industry.
+				I have an experience with forking Pancakeswap on BSC, Polygon, ETH and building Defi site.
+				Especially ERC20, ERC223 standard token creation using latest secure version of solidity code.
+				I've deployed various smart contract, DApps and DeFi projects using React, Web3, Solidity.; currently, I'm
+				focused on:
+				<br>- BEP20 Binance Chain (BSC) ERC20, ERC777, ERC223, ERC721, ERC1155 Ethereum token creation and
+				deployment.
+				<br>- Defi site with pools and farms
+				<br>- Uniswap/Pancakeswap, Metamask support.
+				<br>- Design of launchpad smart-contracts with a vesting schedule, whitelists, fixed/floating price.
+				<br>- SOLANA based RUST smart contract development & deployment
+				<br>- SOLANA NFT minting with metaplex candy machine
+			</p>
+			<div class="developer__box">
+				<div class="btn-pink__wrap">
+					<button type="button" class="developer__btn popup-apply__open btn-pink">
+						Apply for Job
+					</button>
+				</div>
+				<button type="button" class="like-btn card__like">
+					<img src="img/like-icon.svg" alt="">
+				</button>
+			</div>
+			<div class="developer__wrap">
+				<div class="profile-review profile__inner">
+					<div class="profile-review__wrap">
+						<h2 class="profile-review__title">
+							Reviews (89)
+						</h2>
+						<button type="button" class="profile-review__sort">
+							<span>Most Relevant</span>
+							<img src="img/arrow-down-small.svg" alt="">
+						</button>
+					</div>
+					<div class="profile-review__list">
+						<div class="profile-review__item">
+							<div class="profile-review__body">
+								<div class="profile-review__box">
+									<img src="img/profile-photo-4.png" alt="" class="profile-review__img">
+									<p class="profile-review__name">maxwrld</p>
+								</div>
+								<div class="profile-review__box">
+									<p class="profile-review__date">5 month ago</p>
+									<div class="profile-review__star">
+										<img src="img/star-icon.svg" alt="">
+										<span>5.0</span>
+									</div>
+								</div>
+							</div>
+							<p class="profile-review__text">
+								He has rich experience with pancake swap fork. I want to work together forward. Thanks
+							</p>
+						</div>
+						<div class="profile-review__item">
+							<div class="profile-review__body">
+								<div class="profile-review__box">
+									<img src="img/profile-photo-3.png" alt="" class="profile-review__img">
+									<p class="profile-review__name">larsens.sotelo</p>
+								</div>
+								<div class="profile-review__box">
+									<p class="profile-review__date">5 month ago</p>
+									<div class="profile-review__star">
+										<img src="img/star-icon.svg" alt="">
+										<span>5.0</span>
+									</div>
+								</div>
+							</div>
+							<p class="profile-review__text">
+								Johnielevis is a great developer. He has been very helpful with our project and we hope to
+								work
+								again in future.
+							</p>
+						</div>
+						<div class="profile-review__item">
+							<div class="profile-review__body">
+								<div class="profile-review__box">
+									<img src="img/profile-photo-5.png" alt="" class="profile-review__img">
+									<p class="profile-review__name">superman212</p>
+								</div>
+								<div class="profile-review__box">
+									<p class="profile-review__date">4 month ago</p>
+									<div class="profile-review__star">
+										<img src="img/star-icon.svg" alt="">
+										<span>4.0</span>
+									</div>
+								</div>
+							</div>
+							<p class="profile-review__text">
+								Excellent work! Highly recommended!
+							</p>
+						</div>
+						<div class="profile-review__item">
+							<div class="profile-review__body">
+								<div class="profile-review__box">
+									<img src="img/profile-photo-6.png" alt="" class="profile-review__img">
+									<p class="profile-review__name">dimass</p>
+								</div>
+								<div class="profile-review__box">
+									<p class="profile-review__date">3 month ago</p>
+									<div class="profile-review__star">
+										<img src="img/star-icon.svg" alt="">
+										<span>4.2</span>
+									</div>
+								</div>
+							</div>
+							<p class="profile-review__text">
+								He has rich experience with pancake swap fork. I want to work together forward. Thanks
+							</p>
+						</div>
+						<div class="profile-review__item">
+							<div class="profile-review__body">
+								<div class="profile-review__box">
+									<img src="img/profile-photo-4.png" alt="" class="profile-review__img">
+									<p class="profile-review__name">maxwrld</p>
+								</div>
+								<div class="profile-review__box">
+									<p class="profile-review__date">5 month ago</p>
+									<div class="profile-review__star">
+										<img src="img/star-icon.svg" alt="">
+										<span>5.0</span>
+									</div>
+								</div>
+							</div>
+							<p class="profile-review__text">
+								He has rich experience with pancake swap fork. I want to work together forward. Thanks
+							</p>
+						</div>
+					</div>
+					<button type="button" class="profile-review__btn">
+						Show more
+					</button>
+				</div>
+			</div>
+			<div class="developer__wrap">
+				<h2 class="developer__subtitle">
+					More Orders from this customer
+				</h2>
+				<div class="card__grid">
+					<div class="card">
+						<a href="profile-customer.html" class="card__box">
+							<div class="card__img">
+								<img src="img/profile-photo-14.png" alt="">
+							</div>
+							<div class="card__small">
+								<p class="card__name">Sven Fredriksen</p>
+								<div class="card__star">
+									<img src="img/star-icon.svg" alt="">
+									<span>5.0</span>
+								</div>
+							</div>
+						</a>
+						<p class="card__time"> 2 hour ago</p>
+						<h3 class="card__title">
+							Wordpress HTML/CSS/JS/PHP developer
+						</h3>
+						<p class="card__text">
+							I need help making a mobile e-commerce website. I am a developer, and I don't have time to do
+							everything on my own.
+						</p>
+						<div class="card__list profile-offer__list">
+							<div class="profile-offer__service">
+								<div class="profile-offer__info">
+									Web, Mobile & Software Dev
+								</div>
+							</div>
+							<div class="profile-offer__service">
+								<div class="profile-offer__info">
+									IOS
+								</div>
+							</div>
+							<div class="profile-offer__service">
+								<div class="profile-offer__info">
+									HTML
+								</div>
+							</div>
+							<div class="profile-offer__service">
+								<div class="profile-offer__info">
+									Swift
+								</div>
+							</div>
+						</div>
+						<div class="card__wrap">
+							<h3 class="card__price">2 000 USDT</h3>
+							<div class="card__body">
+								<a href="developer.html" class="card__link">
+									See details
+								</a>
+								<button type="button" class="like-btn card__like">
+									<img src="img/like-icon.svg" alt="">
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<a href="profile-customer.html" class="card__box">
+							<div class="card__img">
+								<img src="img/profile-photo-14.png" alt="">
+							</div>
+							<div class="card__small">
+								<p class="card__name">Sven Fredriksen</p>
+								<div class="card__star">
+									<img src="img/star-icon.svg" alt="">
+									<span>5.0</span>
+								</div>
+							</div>
+						</a>
+						<p class="card__time"> 2 hour ago</p>
+						<h3 class="card__title">
+							Wordpress HTML/CSS/JS/PHP developer
+						</h3>
+						<p class="card__text">
+							I need help making a mobile e-commerce website. I am a developer, and I don't have time to do
+							everything on my own.
+						</p>
+						<div class="card__list profile-offer__list">
+							<div class="profile-offer__service">
+								<div class="profile-offer__info">
+									Web, Mobile & Software Dev
+								</div>
+							</div>
+							<div class="profile-offer__service">
+								<div class="profile-offer__info">
+									IOS
+								</div>
+							</div>
+							<div class="profile-offer__service">
+								<div class="profile-offer__info">
+									HTML
+								</div>
+							</div>
+							<div class="profile-offer__service">
+								<div class="profile-offer__info">
+									Swift
+								</div>
+							</div>
+						</div>
+						<div class="card__wrap">
+							<h3 class="card__price">2 000 USDT</h3>
+							<div class="card__body">
+								<a href="developer.html" class="card__link">
+									See details
+								</a>
+								<button type="button" class="like-btn card__like">
+									<img src="img/like-icon.svg" alt="">
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<a href="profile-customer.html" class="card__box">
+							<div class="card__img">
+								<img src="img/profile-photo-14.png" alt="">
+							</div>
+							<div class="card__small">
+								<p class="card__name">Sven Fredriksen</p>
+								<div class="card__star">
+									<img src="img/star-icon.svg" alt="">
+									<span>5.0</span>
+								</div>
+							</div>
+						</a>
+						<p class="card__time"> 2 hour ago</p>
+						<h3 class="card__title">
+							Wordpress HTML/CSS/JS/PHP developer
+						</h3>
+						<p class="card__text">
+							I need help making a mobile e-commerce website. I am a developer, and I don't have time to do
+							everything on my own.
+						</p>
+						<div class="card__list profile-offer__list">
+							<div class="profile-offer__service">
+								<div class="profile-offer__info">
+									Web, Mobile & Software Dev
+								</div>
+							</div>
+							<div class="profile-offer__service">
+								<div class="profile-offer__info">
+									IOS
+								</div>
+							</div>
+							<div class="profile-offer__service">
+								<div class="profile-offer__info">
+									HTML
+								</div>
+							</div>
+							<div class="profile-offer__service">
+								<div class="profile-offer__info">
+									Swift
+								</div>
+							</div>
+						</div>
+						<div class="card__wrap">
+							<h3 class="card__price">2 000 USDT</h3>
+							<div class="card__body">
+								<a href="developer.html" class="card__link">
+									See details
+								</a>
+								<button type="button" class="like-btn card__like">
+									<img src="img/like-icon.svg" alt="">
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+	</main>
+
+	<script src="js/main.js"></script>
+</body>
+
+</html>

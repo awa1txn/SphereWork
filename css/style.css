@@ -3307,6 +3307,28 @@ user-select:none .messages-user__item:last-child {
   height: 100%;
   background: url("../img/sign-bg.png") no-repeat center center/105%;
 }
+.buisness-info_price{
+  margin-bottom: 40px;
+  flex-wrap: nowrap;
+}
+.buisness-info_content{
+  flex-wrap: nowrap;
+  margin-left: 10px;
+}
+.buisness-info_aceleration{
+  font-family: Helvetica Neue;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #BCBCBC;
+  flex-wrap: nowrap;
+}
+.buisness-offer__card{
+  width: 300px;
+  height: 500px;
+}
 .sign__right {
   display: flex;
   flex-direction: column;

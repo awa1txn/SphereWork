@@ -6,16 +6,71 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Sphere Work</title>
+	<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css">
+	<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.structure.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+	<div class="popup popup-deposit">
+		<div class="popup__body">
+			<h2 class="popup-deposit__title">
+				Deposit Crypto
+			</h2>
+			<form action="#" class="edit-general-work__form">
+				<div class="edit-general-work__body">
+					<p class="edit-general-work__subtext">
+						Wallet
+					</p>
+					<div class="edit-general-work__box">
+						<img src="img/cloud-icon.svg" alt="">
+						<input type="text" class="edit-general-work__input input" placeholder="Cloud Wallet">
+					</div>
+				</div>
+				<div class="edit-general-work__body">
+					<p class="edit-general-work__subtext">
+						Blockchain
+					</p>
+					<div class="edit-general-work__box">
+						<img src="img/eth-icon.svg" alt="">
+						<input type="text" class="edit-general-work__input input" placeholder="Cloud Wallet">
+					</div>
+				</div>
+				<div class="edit-general-work__body">
+					<p class="edit-general-work__subtext">
+						Cryptoccurency
+					</p>
+					<div class="edit-general-work__box">
+						<img src="img/tether-icon.svg" alt="">
+						<input type="text" class="edit-general-work__input input" placeholder="Tether USD">
+					</div>
+				</div>
+				<div class="popup-deposit__box">
+					<p class="popup-deposit__subtitle">Wallet adress:</p>
+					<button type="button" class="popup-deposit__adress">
+						<span>0x16575E49d6e8D34a4197a8EF4c1ebE1c2A56f187</span><img src="img/copy-icon.svg" alt="">
+					</button>
+				</div>
+				<div class="popup-deposit__img">
+					<img src="img/qr-code.svg" alt="">
+					<p class="popup-deposit__desc">Scan this QR code to deposit</p>
+				</div>
+				<div class="btn-pink__wrap">
+					<button type="button" class="btn-pink edit-portfolio__btn popup-deposit__close">
+						Send
+					</button>
+				</div>
+			</form>
+		</div>
+		<div class="popup__bg"></div>
+	</div>
+
 	<main class="main">
 		<header class="header">
 			<div class="header__box">
 			</div>
 			<h2 class="header__title">
-				Marketplace
+				Wallet
 			</h2>
 			<div class="header__box">
 				<button type="button" class="header__burger">
@@ -56,7 +111,7 @@
 					</a>
 				</li>
 				<li class="menu__item">
-					<a href="business.html" class="menu__link">
+					<a href="business.html" class="menu__link active">
 						<img src="img/menu-icon-3.svg" alt="">
 						<span>My business</span>
 					</a>
@@ -69,7 +124,7 @@
 					</a>
 				</li>
 				<li class="menu__item">
-					<a href="market.html" class="menu__link active">
+					<a href="market.html" class="menu__link">
 						<img src="img/menu-icon-5.svg" alt="">
 						<span>Marketplace</span>
 					</a>
@@ -115,1088 +170,367 @@
 			</ul>
 		</section>
 		<div class="menu__bg"></div>
-		<section class="market">
-			<h2 class="market__title">
-				Marketplace
+		<section class="wallet">
+			<h2 class="wallet__title">
+				My business
 			</h2>
-			<div class="edit__list">
+			<div class="wallet__wrap buisness-info_price">
+				<div class="wallet-info">
+					<div class="wallet-info__img">
+						<img src="img/profile-photo-1.png" alt="">
+					</div>
+					<div class="wallet-info__content buisness-info_content">
+						<p class="wallet-info__desc buisness-info_data">
+							Completed orders
+						</p>
+						<h2 class="wallet-info__price buisness-info_price">
+							32
+						</h2>
+						<p class="wallet-info__desc buisness-info_data">
+							The order fulfillment cycle
+						</p>
+						<h2 class="wallet-info__price buisness-info_price">
+							7 days
+						</h2>
+					</div>
+					<div class="wallet-info__content buisness-info_content">
+						<p class="wallet-info__desc buisness-info_data">
+							The order fulfillment cycle
+						</p>
+						<h2 class="wallet-info__price buisness-info_price">
+							32 660 <span class="buisness-info_aceleration">SWORK / $2,000</span>
+						</h2>
+						<p class="wallet-info__desc buisness-info_data">
+							Earned for all time
+						</p>
+						<h2 class="wallet-info__price buisness-info_price">
+							1 892.360 <span class="buisness-info_aceleration">SWORK / $2,000</span>
+						</h2>
+					</div>
+
+
+				</div>
+				<div class="wallet-graph">
+					<div class="wallet-graph__box">
+						<div class="edit-general-main__service">
+							<h3>My services: </h3>
+							<div class="edit-general-main__wrap">
+								<button type="button" class="edit-general-main__open">
+									<img src="img/plus-icon.svg" alt="">
+									<span>Add</span>
+								</button>
+								<div class="edit-general-main__drop">
+									<h3 class="edit-general-main__title">Category</h3>
+									<div class="edit-general-main__body">
+										<div class="edit-general-main__btns">
+											<button type="button" class="edit-general-main__swap active" data-index="1">
+												<p>Web, mobile & Software Dev</p>
+												<span>3</span>
+											</button>
+											<button type="button" class="edit-general-main__swap " data-index="2">
+												<p>IT & Networking</p>
+												<span>3</span>
+											</button>
+											<button type="button" class="edit-general-main__swap " data-index="3">
+												<p>Engineering & Architecture</p>
+												<span>3</span>
+											</button>
+											<button type="button" class="edit-general-main__swap " data-index="4">
+												<p>Design & Creative</p>
+												<span>3</span>
+											</button>
+											<button type="button" class="edit-general-main__swap " data-index="5">
+												<p>Web, mobile & Software Dev</p>
+												<span>3</span>
+											</button>
+										</div>
+										<div class="edit-general-main__content active" data-index="1">
+											<button type="button" class="edit-general-main__check">
+												<div></div>
+												<span>Mobile Apps</span>
+											</button>
+											<button type="button" class="edit-general-main__check">
+												<div></div>
+												<span>Mobile Apps</span>
+											</button>
+											<button type="button" class="edit-general-main__check">
+												<div></div>
+												<span>Mobile Apps</span>
+											</button>
+											<button type="button" class="edit-general-main__check">
+												<div></div>
+												<span>Mobile Apps</span>
+											</button>
+											<button type="button" class="edit-general-main__check">
+												<div></div>
+												<span>Mobile Apps</span>
+											</button>
+											<button type="button" class="edit-general-main__check">
+												<div></div>
+												<span>Mobile Apps</span>
+											</button>
+											<button type="button" class="edit-general-main__check">
+												<div></div>
+												<span>Mobile Apps</span>
+											</button>
+											<button type="button" class="edit-general-main__check">
+												<div></div>
+												<span>Mobile Apps</span>
+											</button>
+											<button type="button" class="edit-general-main__check">
+												<div></div>
+												<span>Mobile Apps</span>
+											</button>
+											<button type="button" class="edit-general-main__check">
+												<div></div>
+												<span>Mobile Apps</span>
+											</button>
+											<button type="button" class="edit-general-main__check">
+												<div></div>
+												<span>Mobile Apps</span>
+											</button>
+											<button type="button" class="edit-general-main__check">
+												<div></div>
+												<span>Mobile Apps</span>
+											</button>
+											<button type="button" class="edit-general-main__check">
+												<div></div>
+												<span>Mobile Apps</span>
+											</button>
+											<button type="button" class="edit-general-main__check">
+												<div></div>
+												<span>Mobile Apps</span>
+											</button>
+											<button type="button" class="edit-general-main__check">
+												<div></div>
+												<span>Mobile Apps</span>
+											</button>
+										</div>
+									</div>
+									<div class="edit-general-main__mobile">
+										<div class="edit-general-main__section">
+											<p class="edit-general-main__subtitle">
+												Web, mobile & Software Dev
+											</p>
+											<div class="edit-general-main__content" data-index="1">
+												<button type="button" class="edit-general-main__check">
+													<div></div>
+													<span>Mobile Apps</span>
+												</button>
+												<button type="button" class="edit-general-main__check">
+													<div></div>
+													<span>Front End</span>
+												</button>
+												<button type="button" class="edit-general-main__check">
+													<div></div>
+													<span>Web Programming</span>
+												</button>
+												<button type="button" class="edit-general-main__check">
+													<div></div>
+													<span>E-Commerce Development</span>
+												</button>
+												<button type="button" class="edit-general-main__check">
+													<div></div>
+													<span>Databases</span>
+												</button>
+											</div>
+											<button type="button" class="edit-general-main__more">
+												<img src="img/plus-icon.svg" alt="">
+												<span>89 more</span>
+											</button>
+										</div>
+										<div class="edit-general-main__section">
+											<p class="edit-general-main__subtitle">
+												IT & Networking
+											</p>
+											<div class="edit-general-main__content">
+												<button type="button" class="edit-general-main__check">
+													<div></div>
+													<span>IT & Networking</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="edit-portfolio__wrap">
+										<div class="btn-pink__wrap">
+											<button type="button" class="btn-pink edit-portfolio__btn edit-general-main__drop_cancel">
+												Cancel
+											</button>
+										</div>
+										<div class="btn-pink__wrap">
+											<button type="button" class="btn-pink edit-portfolio__btn">
+												Save
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+							</div>
+			</div>
+			</div>
+			<div class="edit__list buisness-info_price">
 				<button type="button" class="edit__btn active" data-index="1">
 					Orders
 				</button>
 				<button type="button" class="edit__btn" data-index="2">
 					Offers
 				</button>
+				<button type="button" class="edit__btn" data-index="2">
+					Jobs
+				</button>
+				<button type="button" class="edit__btn" data-index="2">
+					Saved
+				</button>
+				<button type="button" class="edit__btn" data-index="2">
+					Completed
+				</button>
 			</div>
-			<div class="edit__content">
-				<div class="market-order edit__content_child active" data-index="1">
-					<div class="btn-pink__wrap market-order__create">
-						<a href="new-order.html" class="btn-pink">
-							Create
-						</a>
+			<div class="profile-offer__content buisness-offer__card ">
+				<a href="market.html" class="profile-offer__card">
+					<div class="profile-offer__img">
+						<img src="img/offer-img-1.png" alt="">
 					</div>
-					<form action="#" class="market-order__form" id="marketForm">
-						<div class="market-order__form_bg"></div>
-						<div class="market-order__body">
-							<div class="market-order__grid">
-								<div class="market-order__box market-order__box_input">
-									<input type="text" class="input market-order__input" placeholder="Search Job title">
-								</div>
-								<div class="market-order__box ">
-									<button type="button" class="market-order__btn">
-										Categories
-									</button>
-									<div class="edit-avatar-coll__drop market-order__drop market-order__drop_cat">
-										<button type="button" class="edit-avatar-coll__check active">
-											<img src="img/check-blue.svg" alt="">
-											<span></span>
-											<p>Web, mobile & Software Dev</p>
-										</button>
-										<button type="button" class="edit-avatar-coll__check">
-											<img src="img/check-blue.svg" alt="">
-											<span></span>
-											<p>IT & Networking</p>
-										</button>
-										<button type="button" class="edit-avatar-coll__check">
-											<img src="img/check-blue.svg" alt="">
-											<span></span>
-											<p>Engineering & Architecture</p>
-										</button>
-										<button type="button" class="edit-avatar-coll__check">
-											<img src="img/check-blue.svg" alt="">
-											<span></span>
-											<p>Design & Creative</p>
-										</button>
-										<button type="button" class="edit-avatar-coll__check">
-											<img src="img/check-blue.svg" alt="">
-											<span></span>
-											<p>Writing</p>
-										</button>
-										<button type="button" class="edit-avatar-coll__check">
-											<img src="img/check-blue.svg" alt="">
-											<span></span>
-											<p>Translation</p>
-										</button>
-										<button type="button" class="edit-avatar-coll__check">
-											<img src="img/check-blue.svg" alt="">
-											<span></span>
-											<p>Engineering & Architecture</p>
-										</button>
-										<button type="button" class="edit-avatar-coll__check">
-											<img src="img/check-blue.svg" alt="">
-											<span></span>
-											<p>Design & Creative</p>
-										</button>
-									</div>
-								</div>
-								<div class="market-order__box">
-									<button type="button" class="market-order__btn">
-										Payment
-									</button>
-									<div class="edit-avatar-coll__drop market-order__drop">
-										<button type="button" class="edit-avatar-coll__check active">
-											<img src="img/check-blue.svg" alt="">
-											<span></span>
-											<p>Per Hour</p>
-										</button>
-										<button type="button" class="edit-avatar-coll__check">
-											<img src="img/check-blue.svg" alt="">
-											<span></span>
-											<p>Per project</p>
-										</button>
-										<button type="button" class="edit-avatar-coll__check">
-											<img src="img/check-blue.svg" alt="">
-											<span></span>
-											<p>Negotiable</p>
-										</button>
-									</div>
-								</div>
-								<div class="market-order__box">
-									<button type="button" class="market-order__btn">
-										Rating
-									</button>
-									<div class="edit-avatar-coll__drop market-order__drop">
-										<button type="button" class="edit-avatar-coll__check active">
-											<img src="img/check-blue.svg" alt="">
-											<span></span>
-											<p>All</p>
-										</button>
-										<button type="button" class="edit-avatar-coll__check">
-											<img src="img/check-blue.svg" alt="">
-											<span></span>
-											<p>5</p>
-										</button>
-										<button type="button" class="edit-avatar-coll__check">
-											<img src="img/check-blue.svg" alt="">
-											<span></span>
-											<p>4+</p>
-										</button>
-										<button type="button" class="edit-avatar-coll__check">
-											<img src="img/check-blue.svg" alt="">
-											<span></span>
-											<p>3+</p>
-										</button>
-									</div>
-								</div>
-								<div class="market-order__box">
-									<button type="button" class="market-order__btn">
-										Sort by
-									</button>
-									<div class="edit-avatar-coll__drop market-order__drop">
-										<button type="button" class="edit-avatar-coll__check active">
-											<img src="img/check-blue.svg" alt="">
-											<span></span>
-											<p>Newest</p>
-										</button>
-										<button type="button" class="edit-avatar-coll__check">
-											<img src="img/check-blue.svg" alt="">
-											<span></span>
-											<p>Oldest</p>
-										</button>
-										<button type="button" class="edit-avatar-coll__check">
-											<img src="img/check-blue.svg" alt="">
-											<span></span>
-											<p>Price Low to High</p>
-										</button>
-										<button type="button" class="edit-avatar-coll__check">
-											<img src="img/check-blue.svg" alt="">
-											<span></span>
-											<p>Price High to Low</p>
-										</button>
-									</div>
-								</div>
+					<div class="profile-offer__body">
+						<div class="profile-offer__box">
+							<div class="profile-offer__logo">
+								<img src="img/profile-photo-1.png" alt="">
 							</div>
-							<div class="market-order__list">
-								<div class="market-order__cat active">
-									<span>Web, Mobile & Software</span>
-									<button type="button">
-										<img src="img/cross-icon.svg" alt="">
-									</button>
-								</div>
-								<div class="market-order__cat active">
-									<span>Sort by: Newest</span>
-									<button type="button">
-										<img src="img/cross-icon.svg" alt="">
-									</button>
-								</div>
-								<div class="market-order__cat active">
-									<span>Price: Low to High</span>
-									<button type="button">
-										<img src="img/cross-icon.svg" alt="">
-									</button>
-								</div>
-								<div class="market-order__cat active">
-									<span>Rating: 5</span>
-									<button type="button">
-										<img src="img/cross-icon.svg" alt="">
-									</button>
-								</div>
-							</div>
-							<button type="button" class="market-order__clear">
-								<img src="img/cross-blue-icon.svg" alt="">
-								<span>Clear filters</span>
-							</button>
-						</div>
-					</form>
-					<div class="card__grid">
-						<div class="card">
-							<a href="profile-customer.html" class="card__box">
-								<div class="card__img">
-									<img src="img/profile-photo-14.png" alt="">
-								</div>
-								<div class="card__small">
-									<p class="card__name">Sven Fredriksen</p>
-									<div class="card__star">
-										<img src="img/star-icon.svg" alt="">
-										<span>5.0</span>
-									</div>
-								</div>
-							</a>
-							<p class="card__time"> 2 hour ago</p>
-							<h3 class="card__title">
-								Wordpress HTML/CSS/JS/PHP developer
-							</h3>
-							<p class="card__text">
-								I need help making a mobile e-commerce website. I am a developer, and I don't have time to do
-								everything on my own.
-							</p>
-							<div class="card__list profile-offer__list">
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										Web, Mobile & Software Dev
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										IOS
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										HTML
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										Swift
-									</div>
-								</div>
-							</div>
-							<div class="card__wrap">
-								<h3 class="card__price">2 000 USDT</h3>
-								<div class="card__body">
-									<a href="developer.html" class="card__link">
-										See details
-									</a>
-									<button type="button" class="like-btn card__like">
-										<img src="img/like-icon.svg" alt="">
-									</button>
+							<div class="profile-offer__wrap">
+								<p class="profile-offer__name">Johnielevis</p>
+								<div class="profile-offer__star">
+									<img src="img/star-icon.svg" alt="">
+									<span>4.8</span>
 								</div>
 							</div>
 						</div>
-						<div class="card">
-							<a href="profile-customer.html" class="card__box">
-								<div class="card__img">
-									<img src="img/profile-photo-14.png" alt="">
-								</div>
-								<div class="card__small">
-									<p class="card__name">Sven Fredriksen</p>
-									<div class="card__star">
-										<img src="img/star-icon.svg" alt="">
-										<span>5.0</span>
-									</div>
-								</div>
-							</a>
-							<p class="card__time"> 2 hour ago</p>
-							<h3 class="card__title">
-								Wordpress HTML/CSS/JS/PHP developer
-							</h3>
-							<p class="card__text">
-								I need help making a mobile e-commerce website. I am a developer, and I don't have time to do
-								everything on my own.
-							</p>
-							<div class="card__list profile-offer__list">
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										Web, Mobile & Software Dev
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										IOS
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										HTML
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										Swift
-									</div>
+						<p class="profile-offer__text">
+							Perform manual QA testing for web and mobile applications
+						</p>
+						<div class="profile-offer__list">
+							<div class="profile-offer__service">
+								<div class="profile-offer__info">
+									Web, Mobile & Software Dev
 								</div>
 							</div>
-							<div class="card__wrap">
-								<h3 class="card__price">2 000 USDT</h3>
-								<div class="card__body">
-									<a href="developer.html" class="card__link">
-										See details
-									</a>
-									<button type="button" class="like-btn card__like">
-										<img src="img/like-icon.svg" alt="">
-									</button>
+							<div class="profile-offer__service">
+								<div class="profile-offer__info">
+									HTML
+								</div>
+							</div>
+							<div class="profile-offer__service">
+								<div class="profile-offer__info">
+									JavaScript
 								</div>
 							</div>
 						</div>
-						<div class="card">
-							<a href="profile-customer.html" class="card__box">
-								<div class="card__img">
-									<img src="img/profile-photo-14.png" alt="">
-								</div>
-								<div class="card__small">
-									<p class="card__name">Sven Fredriksen</p>
-									<div class="card__star">
-										<img src="img/star-icon.svg" alt="">
-										<span>5.0</span>
-									</div>
-								</div>
-							</a>
-							<p class="card__time"> 2 hour ago</p>
-							<h3 class="card__title">
-								Wordpress HTML/CSS/JS/PHP developer
-							</h3>
-							<p class="card__text">
-								I need help making a mobile e-commerce website. I am a developer, and I don't have time to do
-								everything on my own.
-							</p>
-							<div class="card__list profile-offer__list">
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										Web, Mobile & Software Dev
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										IOS
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										HTML
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										Swift
-									</div>
-								</div>
-							</div>
-							<div class="card__wrap">
-								<h3 class="card__price">2 000 USDT</h3>
-								<div class="card__body">
-									<a href="developer.html" class="card__link">
-										See details
-									</a>
-									<button type="button" class="like-btn card__like">
-										<img src="img/like-icon.svg" alt="">
-									</button>
-								</div>
-							</div>
-						</div>
-						<div class="card">
-							<a href="profile-customer.html" class="card__box">
-								<div class="card__img">
-									<img src="img/profile-photo-14.png" alt="">
-								</div>
-								<div class="card__small">
-									<p class="card__name">Sven Fredriksen</p>
-									<div class="card__star">
-										<img src="img/star-icon.svg" alt="">
-										<span>5.0</span>
-									</div>
-								</div>
-							</a>
-							<p class="card__time"> 2 hour ago</p>
-							<h3 class="card__title">
-								Wordpress HTML/CSS/JS/PHP developer
-							</h3>
-							<p class="card__text">
-								I need help making a mobile e-commerce website. I am a developer, and I don't have time to do
-								everything on my own.
-							</p>
-							<div class="card__list profile-offer__list">
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										Web, Mobile & Software Dev
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										IOS
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										HTML
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										Swift
-									</div>
-								</div>
-							</div>
-							<div class="card__wrap">
-								<h3 class="card__price">2 000 USDT</h3>
-								<div class="card__body">
-									<a href="developer.html" class="card__link">
-										See details
-									</a>
-									<button type="button" class="like-btn card__like">
-										<img src="img/like-icon.svg" alt="">
-									</button>
-								</div>
-							</div>
-						</div>
-						<div class="card">
-							<a href="profile-customer.html" class="card__box">
-								<div class="card__img">
-									<img src="img/profile-photo-14.png" alt="">
-								</div>
-								<div class="card__small">
-									<p class="card__name">Sven Fredriksen</p>
-									<div class="card__star">
-										<img src="img/star-icon.svg" alt="">
-										<span>5.0</span>
-									</div>
-								</div>
-							</a>
-							<p class="card__time"> 2 hour ago</p>
-							<h3 class="card__title">
-								Wordpress HTML/CSS/JS/PHP developer
-							</h3>
-							<p class="card__text">
-								I need help making a mobile e-commerce website. I am a developer, and I don't have time to do
-								everything on my own.
-							</p>
-							<div class="card__list profile-offer__list">
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										Web, Mobile & Software Dev
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										IOS
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										HTML
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										Swift
-									</div>
-								</div>
-							</div>
-							<div class="card__wrap">
-								<h3 class="card__price">2 000 USDT</h3>
-								<div class="card__body">
-									<a href="developer.html" class="card__link">
-										See details
-									</a>
-									<button type="button" class="like-btn card__like">
-										<img src="img/like-icon.svg" alt="">
-									</button>
-								</div>
-							</div>
-						</div>
-						<div class="card">
-							<a href="profile-customer.html" class="card__box">
-								<div class="card__img">
-									<img src="img/profile-photo-14.png" alt="">
-								</div>
-								<div class="card__small">
-									<p class="card__name">Sven Fredriksen</p>
-									<div class="card__star">
-										<img src="img/star-icon.svg" alt="">
-										<span>5.0</span>
-									</div>
-								</div>
-							</a>
-							<p class="card__time"> 2 hour ago</p>
-							<h3 class="card__title">
-								Wordpress HTML/CSS/JS/PHP developer
-							</h3>
-							<p class="card__text">
-								I need help making a mobile e-commerce website. I am a developer, and I don't have time to do
-								everything on my own.
-							</p>
-							<div class="card__list profile-offer__list">
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										Web, Mobile & Software Dev
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										IOS
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										HTML
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										Swift
-									</div>
-								</div>
-							</div>
-							<div class="card__wrap">
-								<h3 class="card__price">2 000 USDT</h3>
-								<div class="card__body">
-									<a href="developer.html" class="card__link">
-										See details
-									</a>
-									<button type="button" class="like-btn card__like">
-										<img src="img/like-icon.svg" alt="">
-									</button>
-								</div>
-							</div>
-						</div>
-						<div class="card">
-							<a href="profile-customer.html" class="card__box">
-								<div class="card__img">
-									<img src="img/profile-photo-14.png" alt="">
-								</div>
-								<div class="card__small">
-									<p class="card__name">Sven Fredriksen</p>
-									<div class="card__star">
-										<img src="img/star-icon.svg" alt="">
-										<span>5.0</span>
-									</div>
-								</div>
-							</a>
-							<p class="card__time"> 2 hour ago</p>
-							<h3 class="card__title">
-								Wordpress HTML/CSS/JS/PHP developer
-							</h3>
-							<p class="card__text">
-								I need help making a mobile e-commerce website. I am a developer, and I don't have time to do
-								everything on my own.
-							</p>
-							<div class="card__list profile-offer__list">
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										Web, Mobile & Software Dev
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										IOS
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										HTML
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										Swift
-									</div>
-								</div>
-							</div>
-							<div class="card__wrap">
-								<h3 class="card__price">2 000 USDT</h3>
-								<div class="card__body">
-									<a href="developer.html" class="card__link">
-										See details
-									</a>
-									<button type="button" class="like-btn card__like">
-										<img src="img/like-icon.svg" alt="">
-									</button>
-								</div>
-							</div>
-						</div>
-						<div class="card">
-							<a href="profile-customer.html" class="card__box">
-								<div class="card__img">
-									<img src="img/profile-photo-14.png" alt="">
-								</div>
-								<div class="card__small">
-									<p class="card__name">Sven Fredriksen</p>
-									<div class="card__star">
-										<img src="img/star-icon.svg" alt="">
-										<span>5.0</span>
-									</div>
-								</div>
-							</a>
-							<p class="card__time"> 2 hour ago</p>
-							<h3 class="card__title">
-								Wordpress HTML/CSS/JS/PHP developer
-							</h3>
-							<p class="card__text">
-								I need help making a mobile e-commerce website. I am a developer, and I don't have time to do
-								everything on my own.
-							</p>
-							<div class="card__list profile-offer__list">
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										Web, Mobile & Software Dev
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										IOS
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										HTML
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										Swift
-									</div>
-								</div>
-							</div>
-							<div class="card__wrap">
-								<h3 class="card__price">2 000 USDT</h3>
-								<div class="card__body">
-									<a href="developer.html" class="card__link">
-										See details
-									</a>
-									<button type="button" class="like-btn card__like">
-										<img src="img/like-icon.svg" alt="">
-									</button>
-								</div>
-							</div>
+						<div class="profile-offer__price">
+							1 000 USDT
 						</div>
 					</div>
-				</div>
-				<div class="market-offer edit__content_child" data-index="2">
-					<div class="btn-pink__wrap market-order__create">
-						<a href="new-order.html" class="btn-pink">
-							Create
-						</a>
+				</a>
+				<a href="market.html" class="profile-offer__card buisness-offer__card">
+					<div class="profile-offer__img">
+						<img src="img/offer-img-2.png" alt="">
 					</div>
-					<div class="card__grid">
-						<div class="card card_big">
-							<div class="card__cover">
-								<img src="img/offer-img-1.png" alt="">
+					<div class="profile-offer__body">
+						<div class="profile-offer__box">
+							<div class="profile-offer__logo">
+								<img src="img/profile-photo-1.png" alt="">
 							</div>
-							<a href="profile-customer.html" class="card__box">
-								<div class="card__img">
-									<img src="img/profile-photo-14.png" alt="">
-								</div>
-								<div class="card__small">
-									<p class="card__name">Sven Fredriksen</p>
-									<div class="card__star">
-										<img src="img/star-icon.svg" alt="">
-										<span>5.0</span>
-									</div>
-								</div>
-							</a>
-							<p class="card__time"> 2 hour ago</p>
-							<h3 class="card__title">
-								Wordpress HTML/CSS/JS/PHP developer
-							</h3>
-							<div class="card__list profile-offer__list">
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										Web, Mobile & Software Dev
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										IOS
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										HTML
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										Swift
-									</div>
-								</div>
-							</div>
-							<div class="card__wrap">
-								<h3 class="card__price">2 000 USDT</h3>
-								<div class="card__body">
-									<a href="developer.html" class="card__link">
-										See details
-									</a>
-									<button type="button" class="like-btn card__like">
-										<img src="img/like-icon.svg" alt="">
-									</button>
+							<div class="profile-offer__wrap">
+								<p class="profile-offer__name">Johnielevis</p>
+								<div class="profile-offer__star">
+									<img src="img/star-icon.svg" alt="">
+									<span>4.8</span>
 								</div>
 							</div>
 						</div>
-						<div class="card card_big">
-							<div class="card__cover">
-								<img src="img/offer-img-1.png" alt="">
-							</div>
-							<a href="profile-customer.html" class="card__box">
-								<div class="card__img">
-									<img src="img/profile-photo-14.png" alt="">
-								</div>
-								<div class="card__small">
-									<p class="card__name">Sven Fredriksen</p>
-									<div class="card__star">
-										<img src="img/star-icon.svg" alt="">
-										<span>5.0</span>
-									</div>
-								</div>
-							</a>
-							<p class="card__time"> 2 hour ago</p>
-							<h3 class="card__title">
-								Wordpress HTML/CSS/JS/PHP developer
-							</h3>
-							<div class="card__list profile-offer__list">
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										Web, Mobile & Software Dev
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										IOS
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										HTML
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										Swift
-									</div>
+						<p class="profile-offer__text">
+							Make apps with flutter for you pixel perfectly
+						</p>
+						<div class="profile-offer__list">
+							<div class="profile-offer__service">
+								<div class="profile-offer__info">
+									Web, Mobile & Software Dev
 								</div>
 							</div>
-							<div class="card__wrap">
-								<h3 class="card__price">2 000 USDT</h3>
-								<div class="card__body">
-									<a href="developer.html" class="card__link">
-										See details
-									</a>
-									<button type="button" class="like-btn card__like">
-										<img src="img/like-icon.svg" alt="">
-									</button>
+							<div class="profile-offer__service">
+								<div class="profile-offer__info">
+									IOS
+								</div>
+							</div>
+							<div class="profile-offer__service">
+								<div class="profile-offer__info">
+									HTML
+								</div>
+							</div>
+							<div class="profile-offer__service">
+								<div class="profile-offer__info">
+									Swift
 								</div>
 							</div>
 						</div>
-						<div class="card card_big">
-							<div class="card__cover">
-								<img src="img/offer-img-1.png" alt="">
-							</div>
-							<a href="profile-customer.html" class="card__box">
-								<div class="card__img">
-									<img src="img/profile-photo-14.png" alt="">
-								</div>
-								<div class="card__small">
-									<p class="card__name">Sven Fredriksen</p>
-									<div class="card__star">
-										<img src="img/star-icon.svg" alt="">
-										<span>5.0</span>
-									</div>
-								</div>
-							</a>
-							<p class="card__time"> 2 hour ago</p>
-							<h3 class="card__title">
-								Wordpress HTML/CSS/JS/PHP developer
-							</h3>
-							<div class="card__list profile-offer__list">
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										Web, Mobile & Software Dev
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										IOS
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										HTML
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										Swift
-									</div>
-								</div>
-							</div>
-							<div class="card__wrap">
-								<h3 class="card__price">2 000 USDT</h3>
-								<div class="card__body">
-									<a href="developer.html" class="card__link">
-										See details
-									</a>
-									<button type="button" class="like-btn card__like">
-										<img src="img/like-icon.svg" alt="">
-									</button>
-								</div>
-							</div>
-						</div>
-						<div class="card card_big">
-							<div class="card__cover">
-								<img src="img/offer-img-1.png" alt="">
-							</div>
-							<a href="profile-customer.html" class="card__box">
-								<div class="card__img">
-									<img src="img/profile-photo-14.png" alt="">
-								</div>
-								<div class="card__small">
-									<p class="card__name">Sven Fredriksen</p>
-									<div class="card__star">
-										<img src="img/star-icon.svg" alt="">
-										<span>5.0</span>
-									</div>
-								</div>
-							</a>
-							<p class="card__time"> 2 hour ago</p>
-							<h3 class="card__title">
-								Wordpress HTML/CSS/JS/PHP developer
-							</h3>
-							<div class="card__list profile-offer__list">
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										Web, Mobile & Software Dev
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										IOS
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										HTML
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										Swift
-									</div>
-								</div>
-							</div>
-							<div class="card__wrap">
-								<h3 class="card__price">2 000 USDT</h3>
-								<div class="card__body">
-									<a href="developer.html" class="card__link">
-										See details
-									</a>
-									<button type="button" class="like-btn card__like">
-										<img src="img/like-icon.svg" alt="">
-									</button>
-								</div>
-							</div>
-						</div>
-						<div class="card card_big">
-							<div class="card__cover">
-								<img src="img/offer-img-1.png" alt="">
-							</div>
-							<a href="profile-customer.html" class="card__box">
-								<div class="card__img">
-									<img src="img/profile-photo-14.png" alt="">
-								</div>
-								<div class="card__small">
-									<p class="card__name">Sven Fredriksen</p>
-									<div class="card__star">
-										<img src="img/star-icon.svg" alt="">
-										<span>5.0</span>
-									</div>
-								</div>
-							</a>
-							<p class="card__time"> 2 hour ago</p>
-							<h3 class="card__title">
-								Wordpress HTML/CSS/JS/PHP developer
-							</h3>
-							<div class="card__list profile-offer__list">
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										Web, Mobile & Software Dev
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										IOS
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										HTML
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										Swift
-									</div>
-								</div>
-							</div>
-							<div class="card__wrap">
-								<h3 class="card__price">2 000 USDT</h3>
-								<div class="card__body">
-									<a href="developer.html" class="card__link">
-										See details
-									</a>
-									<button type="button" class="like-btn card__like">
-										<img src="img/like-icon.svg" alt="">
-									</button>
-								</div>
-							</div>
-						</div>
-						<div class="card card_big">
-							<div class="card__cover">
-								<img src="img/offer-img-1.png" alt="">
-							</div>
-							<a href="profile-customer.html" class="card__box">
-								<div class="card__img">
-									<img src="img/profile-photo-14.png" alt="">
-								</div>
-								<div class="card__small">
-									<p class="card__name">Sven Fredriksen</p>
-									<div class="card__star">
-										<img src="img/star-icon.svg" alt="">
-										<span>5.0</span>
-									</div>
-								</div>
-							</a>
-							<p class="card__time"> 2 hour ago</p>
-							<h3 class="card__title">
-								Wordpress HTML/CSS/JS/PHP developer
-							</h3>
-							<div class="card__list profile-offer__list">
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										Web, Mobile & Software Dev
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										IOS
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										HTML
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										Swift
-									</div>
-								</div>
-							</div>
-							<div class="card__wrap">
-								<h3 class="card__price">2 000 USDT</h3>
-								<div class="card__body">
-									<a href="developer.html" class="card__link">
-										See details
-									</a>
-									<button type="button" class="like-btn card__like">
-										<img src="img/like-icon.svg" alt="">
-									</button>
-								</div>
-							</div>
-						</div>
-						<div class="card card_big">
-							<div class="card__cover">
-								<img src="img/offer-img-1.png" alt="">
-							</div>
-							<a href="profile-customer.html" class="card__box">
-								<div class="card__img">
-									<img src="img/profile-photo-14.png" alt="">
-								</div>
-								<div class="card__small">
-									<p class="card__name">Sven Fredriksen</p>
-									<div class="card__star">
-										<img src="img/star-icon.svg" alt="">
-										<span>5.0</span>
-									</div>
-								</div>
-							</a>
-							<p class="card__time"> 2 hour ago</p>
-							<h3 class="card__title">
-								Wordpress HTML/CSS/JS/PHP developer
-							</h3>
-							<div class="card__list profile-offer__list">
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										Web, Mobile & Software Dev
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										IOS
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										HTML
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										Swift
-									</div>
-								</div>
-							</div>
-							<div class="card__wrap">
-								<h3 class="card__price">2 000 USDT</h3>
-								<div class="card__body">
-									<a href="developer.html" class="card__link">
-										See details
-									</a>
-									<button type="button" class="like-btn card__like">
-										<img src="img/like-icon.svg" alt="">
-									</button>
-								</div>
-							</div>
-						</div>
-						<div class="card card_big">
-							<div class="card__cover">
-								<img src="img/offer-img-1.png" alt="">
-							</div>
-							<a href="profile-customer.html" class="card__box">
-								<div class="card__img">
-									<img src="img/profile-photo-14.png" alt="">
-								</div>
-								<div class="card__small">
-									<p class="card__name">Sven Fredriksen</p>
-									<div class="card__star">
-										<img src="img/star-icon.svg" alt="">
-										<span>5.0</span>
-									</div>
-								</div>
-							</a>
-							<p class="card__time"> 2 hour ago</p>
-							<h3 class="card__title">
-								Wordpress HTML/CSS/JS/PHP developer
-							</h3>
-							<div class="card__list profile-offer__list">
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										Web, Mobile & Software Dev
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										IOS
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										HTML
-									</div>
-								</div>
-								<div class="profile-offer__service">
-									<div class="profile-offer__info">
-										Swift
-									</div>
-								</div>
-							</div>
-							<div class="card__wrap">
-								<h3 class="card__price">2 000 USDT</h3>
-								<div class="card__body">
-									<a href="developer.html" class="card__link">
-										See details
-									</a>
-									<button type="button" class="like-btn card__like">
-										<img src="img/like-icon.svg" alt="">
-									</button>
-								</div>
-							</div>
+						<div class="profile-offer__price">
+							900 USDT
 						</div>
 					</div>
-				</div>
-			</div>
-			<div class="market-mob">
-				<div class="btn-pink__wrap market-order__filter">
-					<a href="new-order.html" class="btn-pink">
-						Create new Orders
-					</a>
-				</div>
-				<div class="btn-pink__wrap market-order__filter_2">
-					<button type="button" class="btn-pink">
-						Filters
-					</button>
-				</div>
+				</a>
+				<a href="market.html" class="profile-offer__card buisness-offer__card">
+					<div class="profile-offer__img">
+						<img src="img/offer-img-3.png" alt="">
+					</div>
+					<div class="profile-offer__body">
+						<div class="profile-offer__box">
+							<div class="profile-offer__logo">
+								<img src="img/profile-photo-1.png" alt="">
+							</div>
+							<div class="profile-offer__wrap">
+								<p class="profile-offer__name">Johnielevis</p>
+								<div class="profile-offer__star">
+									<img src="img/star-icon.svg" alt="">
+									<span>4.8</span>
+								</div>
+							</div>
+						</div>
+						<p class="profile-offer__text">
+							Develop blockchain based websites and solutions for our firm
+						</p>
+						<div class="profile-offer__list">
+							<div class="profile-offer__service">
+								<div class="profile-offer__info">
+									Web, Mobile & Software Dev
+								</div>
+							</div>
+							<div class="profile-offer__service">
+								<div class="profile-offer__info">
+									IOS
+								</div>
+							</div>
+							<div class="profile-offer__service">
+								<div class="profile-offer__info">
+									HTML
+								</div>
+							</div>
+							<div class="profile-offer__service">
+								<div class="profile-offer__info">
+									CSS
+								</div>
+							</div>
+						</div>
+						<div class="profile-offer__price">
+							1 300 USDT
+						</div>
+					</div>
+				</a>
 			</div>
 		</section>
+		
 	</main>
 
+	<script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+	<script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
 
